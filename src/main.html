@@ -1,0 +1,678 @@
+<style id="ra-mamarias-css">
+/* =========================================================
+   Unidad de Imágenes Mamarias — Radiólogos Asociados
+   Sistema: Raleway · Azul marino #1D3358 · Celeste #6EC1E4
+   Paleta de la Unidad Cancer de Prostata: #1D3358 #6EC1E4 #E2F3FA #2B6EA5 #1F3D65 #296499 #05A299
+   ========================================================= */
+.ra-mam{
+  --navy:#1D3358; --navy-2:#1F3D65; --navy-ink:#1D3358;
+  --sky:#6EC1E4; --sky-600:#2B6EA5; --sky-50:#E2F3FA; --sky-25:#E2F3FA;
+  --ink:#1D3358; --muted:rgba(29,51,88,.82); --line:rgba(110,193,228,.4); --white:#fff;
+  --radius:22px; --radius-lg:32px; --pill:40px;
+  --shadow:0 14px 40px -18px rgba(29,51,88,.28);
+  --shadow-sm:0 6px 18px -10px rgba(29,51,88,.25);
+  --wrap:1440px; --nav-top:0px;
+  font-family:"Raleway",sans-serif; color:var(--ink); font-size:18px; line-height:1.65;
+  background:#fff; overflow-x:clip;
+}
+.ra-mam *,.ra-mam *::before,.ra-mam *::after{box-sizing:border-box}
+.ra-mam h1,.ra-mam h2,.ra-mam h3,.ra-mam h4{font-family:"Raleway",sans-serif;color:var(--navy);font-weight:700;line-height:1.18;margin:0}
+:where(.ra-mam) p{margin:0}
+:where(.ra-mam) a{color:inherit;text-decoration:none}
+:where(.ra-mam) img{display:block;max-width:100%;height:auto}
+:where(.ra-mam) ul{margin:0;padding:0;list-style:none}
+.ra-mam :focus-visible{outline:3px solid var(--sky-600);outline-offset:3px;border-radius:8px}
+.ra-wrap{max-width:var(--wrap);margin:0 auto;padding:0 32px}
+@media (max-width:1024px){.ra-wrap{padding:0 24px}}
+@media (max-width:767px){.ra-wrap{padding:0 16px}}
+.ra-section{padding:96px 0;scroll-margin-top:calc(var(--nav-top) + 20px)}
+.ra-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sky-600);margin-bottom:16px}
+.ra-eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sky);box-shadow:0 0 0 4px rgba(110,193,228,.25)}
+.ra-h2{font-size:40px}
+.ra-lead{font-size:20px;color:var(--muted);margin-top:18px;max-width:760px}
+.ra-head{margin-bottom:48px}
+.ra-head--center{text-align:center}
+.ra-head--center .ra-lead{margin-left:auto;margin-right:auto}
+
+/* Botones (pill, como la referencia) */
+.ra-mam .ra-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:16px 34px;border-radius:var(--pill);font-family:"Raleway",sans-serif;font-size:18px;font-weight:700;line-height:1.1;border:2px solid transparent;transition:transform .2s ease,background-color .2s ease,color .2s ease,box-shadow .2s ease;cursor:pointer;text-align:center}
+.ra-mam .ra-btn svg{width:20px;height:20px;flex:none}
+.ra-mam .ra-btn:hover{transform:translateY(-2px)}
+.ra-mam .ra-btn--primary{background:var(--navy);color:#fff;box-shadow:var(--shadow-sm)}
+.ra-mam .ra-btn--primary:hover{background:var(--navy-2);color:#fff}
+.ra-mam .ra-btn--sky{background:var(--sky);color:var(--navy-ink);box-shadow:var(--shadow-sm)}
+.ra-mam .ra-btn--sky:hover{background:var(--sky-600);color:#fff}
+.ra-mam .ra-btn--outline{background:transparent;color:var(--navy);border-color:var(--navy)}
+.ra-mam .ra-btn--outline:hover{background:var(--navy);color:#fff}
+.ra-mam .ra-btn--ghost-light{background:transparent;color:#fff;border-color:rgba(255,255,255,.7)}
+.ra-mam .ra-btn--ghost-light:hover{background:#fff;color:var(--navy)}
+.ra-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+
+/* ---------- HERO ---------- */
+/* Imagen a sangre completa de fondo + texto sobre el espacio negativo izquierdo */
+.ra-hero{position:relative;min-height:max(620px,min(78vh,820px));display:flex;flex-direction:column;background:var(--sky-50);overflow:hidden;isolation:isolate}
+.ra-hero__bg{position:absolute;inset:0;z-index:-2}
+.ra-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:78% 30%}
+.ra-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(226,243,250,.55) 0%,rgba(226,243,250,0) 45%)}
+.ra-hero > .ra-wrap{width:100%;flex:1;display:flex;flex-direction:column;padding-top:32px;padding-bottom:72px}
+.ra-crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:15px;color:var(--navy);margin-bottom:auto}
+.ra-crumbs a{text-decoration:underline;text-underline-offset:3px}
+.ra-crumbs a:hover{color:var(--sky-600)}
+.ra-crumbs span[aria-hidden]{opacity:.5}
+/* Recuadro oscuro translúcido sobre la foto, como en las referencias */
+.ra-hero__text{max-width:640px;margin:36px 0 auto;padding:38px 42px 40px;border-radius:var(--radius-lg);background:rgba(10,18,32,.72);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;box-shadow:0 24px 60px rgba(10,18,32,.25)}
+.ra-hero__text .ra-eyebrow{color:#fff}
+.ra-mam .ra-hero__title{font-size:42px;line-height:1.14;letter-spacing:-.01em;color:#fff}
+.ra-hero__title em{font-style:normal;color:var(--sky)}
+.ra-hero__sub{font-size:21px;color:rgba(255,255,255,.9);margin-top:22px;max-width:560px}
+.ra-hero__text .ra-actions{margin-top:30px}
+.ra-mam .ra-hero__text .ra-btn--primary{background:var(--sky);color:var(--navy-ink)}
+.ra-mam .ra-hero__text .ra-btn--primary:hover{background:#fff;color:var(--navy)}
+.ra-mam .ra-hero__text .ra-btn--outline{color:#fff;border-color:rgba(255,255,255,.75)}
+.ra-mam .ra-hero__text .ra-btn--outline:hover{background:#fff;color:var(--navy);border-color:#fff}
+
+/* ---------- POR QUÉ ELEGIRNOS ---------- */
+.ra-why{background:#fff}
+.ra-why__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.ra-why__text p{font-size:21px;line-height:1.7;color:var(--navy);margin-top:22px}
+.ra-why__text p strong{color:var(--sky-600);font-weight:700}
+.ra-pillars{display:grid;gap:16px}
+.ra-pillar{display:flex;align-items:center;gap:20px;padding:24px 26px;border-radius:var(--radius);background:var(--sky-25);border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.ra-pillar:nth-child(2){margin-left:36px;background:var(--navy);border-color:var(--navy)}
+.ra-pillar:nth-child(2) h3{color:#fff}
+.ra-pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
+.ra-pillar__ico{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--sky-600);box-shadow:var(--shadow-sm)}
+.ra-pillar:nth-child(2) .ra-pillar__ico{color:var(--navy)}
+.ra-pillar__ico svg{width:28px;height:28px}
+.ra-pillar h3{font-size:21px}
+
+/* ---------- SERVICIOS ---------- */
+.ra-services{background:var(--sky-50)}
+.ra-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.ra-card{position:relative;background:#fff;border-radius:var(--radius);padding:38px 36px 36px;box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s;overflow:hidden}
+.ra-card::before{content:"";position:absolute;left:0;top:0;right:0;height:5px;background:linear-gradient(90deg,var(--sky),var(--sky-600))}
+.ra-card:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.ra-card__top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}
+.ra-card__ico{width:64px;height:64px;border-radius:18px;background:var(--sky-50);color:var(--navy);display:grid;place-items:center}
+.ra-card__ico svg{width:34px;height:34px}
+.ra-card__num{font-size:44px;font-weight:800;color:var(--sky-50);line-height:1}
+.ra-card h3{font-size:24px;margin-bottom:12px}
+.ra-card p{color:var(--muted)}
+
+/* Biopsias */
+.ra-biopsy{margin-top:56px;display:grid;grid-template-columns:.95fr 1.05fr;border-radius:var(--radius-lg);overflow:hidden;background:#fff;box-shadow:var(--shadow);scroll-margin-top:calc(var(--nav-top) + 20px)}
+.ra-biopsy__media{position:relative;min-height:420px}
+.ra-biopsy__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:52% 50%}
+.ra-biopsy__body{padding:52px 52px 48px;background:linear-gradient(180deg,#fff 0%,var(--sky-50) 100%)}
+.ra-biopsy__body h3{font-size:32px}
+.ra-biopsy__body > p{font-size:19px;color:var(--muted);margin-top:10px}
+.ra-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.ra-chip{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:var(--pill);background:#fff;border:1.5px solid var(--sky);font-size:16px;font-weight:600;color:var(--navy)}
+.ra-chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--sky)}
+.ra-biopsy h4{font-size:20px;margin:34px 0 16px}
+.ra-checks{display:grid;gap:12px}
+.ra-checks li{position:relative;padding-left:40px;color:var(--navy);font-size:18px}
+.ra-checks li::before{content:"";position:absolute;left:0;top:2px;width:26px;height:26px;border-radius:50%;background:var(--sky-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232B6EA5' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/15px no-repeat}
+.ra-mini{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.ra-mini__item{display:flex;gap:20px;align-items:center;background:#fff;border-radius:var(--radius);padding:30px 32px;box-shadow:var(--shadow-sm);border-left:5px solid var(--sky)}
+.ra-mini__item .ra-card__ico{flex:none;width:56px;height:56px;background:var(--sky-50);color:var(--sky-600)}
+.ra-mini__item .ra-card__ico svg{width:28px;height:28px}
+.ra-mini__item h3{font-size:22px;margin-bottom:6px}
+.ra-mini__item p{color:var(--muted)}
+
+/* ---------- DATOS ---------- */
+.ra-stats{position:relative;background:linear-gradient(120deg,#05A299 0%,#2B6EA5 100%);color:#fff;overflow:hidden}
+.ra-stats .ra-h2,.ra-stats .ra-eyebrow{color:#fff}
+.ra-stats .ra-eyebrow::before{background:#fff;box-shadow:0 0 0 4px rgba(255,255,255,.25)}
+.ra-stats .ra-lead{color:rgba(255,255,255,.92)}
+.ra-stats__rings{position:absolute;right:-180px;top:-160px;width:620px;height:620px;color:#fff;opacity:.14;pointer-events:none}
+.ra-stats__grid{position:relative;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.ra-stat{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:var(--radius);padding:34px 28px;transition:background-color .25s}
+.ra-stat:hover{background:rgba(255,255,255,.16)}
+.ra-stat__num{font-size:54px;font-weight:800;line-height:1;color:#fff;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ra-stat__num small{font-size:24px;font-weight:700;color:#fff;margin-right:6px}
+.ra-stat p{margin-top:18px;font-size:18px;color:#fff}
+
+/* ---------- ESPECIALISTAS ---------- */
+.ra-team{background:#fff}
+.ra-team__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.ra-doc{display:flex;flex-direction:column;background:#fff;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
+.ra-doc:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.ra-doc__photo{aspect-ratio:4/4.3;background:var(--sky-50);overflow:hidden}
+.ra-doc__photo img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;transition:transform .6s ease}
+.ra-doc:hover .ra-doc__photo img{transform:scale(1.04)}
+.ra-doc__body{padding:28px 28px 32px;flex:1;border-top:5px solid var(--sky)}
+.ra-doc:nth-child(2) .ra-doc__body{border-top-color:var(--sky-600)}
+.ra-doc h3{font-size:21px;letter-spacing:.02em}
+.ra-creds{display:grid;gap:14px;margin-top:20px}
+.ra-creds li{font-size:16px;line-height:1.5;color:var(--muted);padding-left:18px;position:relative}
+.ra-creds li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--sky)}
+.ra-creds strong{display:block;color:var(--navy);font-weight:700;font-size:15px;text-transform:uppercase;letter-spacing:.05em}
+
+/* ---------- RESULTADOS ---------- */
+.ra-results{background:linear-gradient(180deg,#1F3D65 0%,#296499 100%)}
+.ra-results .ra-h2,.ra-results .ra-eyebrow{color:#fff}
+.ra-results .ra-eyebrow::before{background:var(--sky);box-shadow:0 0 0 4px rgba(110,193,228,.3)}
+.ra-results__grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.ra-results__text p{font-size:20px;color:rgba(255,255,255,.9);margin-top:20px}
+.ra-steps{background:#fff;border-radius:var(--radius-lg);padding:40px;box-shadow:var(--shadow)}
+.ra-steps h3{font-size:22px;margin-bottom:24px;display:flex;align-items:center;gap:12px}
+.ra-steps h3 svg{width:26px;height:26px;color:var(--sky-600)}
+.ra-steps ol{list-style:none;margin:0;padding:0;display:grid;gap:22px;counter-reset:step}
+.ra-steps li{counter-increment:step;display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:center;font-size:18px;color:var(--navy)}
+.ra-steps li::before{content:counter(step);width:52px;height:52px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:#fff;font-weight:800;font-size:20px}
+.ra-steps li + li{padding-top:22px;border-top:1px dashed var(--line)}
+
+/* ---------- CONTACTO ---------- */
+.ra-contact{background:#fff}
+.ra-contact__grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
+.ra-contact__cols{display:grid;gap:24px}
+.ra-info{background:var(--sky-25);border:1px solid var(--line);border-radius:var(--radius);padding:32px}
+.ra-info h3{font-size:20px;margin-bottom:18px}
+.ra-info ul{display:grid;gap:16px}
+.ra-info li{display:flex;gap:16px;align-items:flex-start}
+.ra-info__ico{flex:none;width:46px;height:46px;border-radius:50%;background:#fff;color:var(--sky-600);display:grid;place-items:center;box-shadow:var(--shadow-sm)}
+.ra-info__ico svg{width:21px;height:21px}
+.ra-info small{display:block;font-size:14px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.ra-info a,.ra-info span.ra-val{font-size:19px;font-weight:600;color:var(--navy);word-break:break-word}
+.ra-info a:hover{color:var(--sky-600);text-decoration:underline;text-underline-offset:3px}
+.ra-map{border-radius:var(--radius);overflow:hidden;min-height:440px;box-shadow:var(--shadow);background:var(--sky-50)}
+.ra-map iframe{display:block;width:100%;height:100%;min-height:440px;border:0}
+
+/* ---------- FAQ ---------- */
+.ra-faq{background:var(--sky-25)}
+.ra-faq__layout{display:grid;grid-template-columns:300px 1fr;gap:48px;align-items:start}
+.ra-tabs{position:sticky;top:calc(var(--nav-top) + 24px);display:grid;gap:8px}
+.ra-mam .ra-tab{all:unset;box-sizing:border-box;display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:16px 20px;border-radius:16px;font-family:"Raleway",sans-serif;font-size:17px;font-weight:700;line-height:1.3;color:var(--navy);background:#fff;border:1px solid var(--line);cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}
+.ra-mam .ra-tab:hover{border-color:var(--sky)}
+.ra-mam .ra-tab[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.ra-mam .ra-tab:focus-visible{outline:3px solid var(--sky-600);outline-offset:2px}
+.ra-tab__count{flex:none;min-width:30px;height:30px;padding:0 8px;border-radius:15px;display:grid;place-items:center;font-size:14px;background:var(--sky-50);color:var(--navy)}
+.ra-mam .ra-tab[aria-selected="true"] .ra-tab__count{background:var(--sky);color:var(--navy-ink)}
+.ra-panel[hidden]{display:none}
+.ra-panel h3{font-size:26px;margin-bottom:20px}
+.ra-qa{background:#fff;border:1px solid var(--line);border-radius:18px;margin-bottom:12px;transition:box-shadow .2s,border-color .2s}
+.ra-qa[open]{border-color:var(--sky);box-shadow:var(--shadow-sm)}
+.ra-qa summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:18px;padding:22px 24px;font-size:19px;font-weight:700;color:var(--navy);line-height:1.35}
+.ra-qa summary::-webkit-details-marker{display:none}
+.ra-qa summary::after{content:"";flex:none;width:34px;height:34px;border-radius:50%;background:var(--sky-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231D3358' stroke-width='2.6' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E") center/16px no-repeat;transition:transform .25s,background-color .25s}
+.ra-qa[open] summary::after{transform:rotate(45deg);background-color:var(--sky)}
+.ra-qa__a{padding:0 24px 24px;color:var(--muted);font-size:18px}
+
+/* Revelado suave */
+.ra-reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.ra-reveal.is-in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .ra-reveal{opacity:1;transform:none;transition:none}
+  .ra-mam *{transition:none!important}
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width:1024px){
+  .ra-section{padding:80px 0}
+  .ra-h2{font-size:34px}
+  .ra-mam .ra-hero__title{font-size:36px}
+  .ra-hero__text{max-width:520px}
+  .ra-hero__text{padding:36px 34px 38px}
+  .ra-why__grid,.ra-results__grid{gap:44px}
+  .ra-stats__grid{grid-template-columns:repeat(2,1fr)}
+  .ra-team__grid{grid-template-columns:repeat(2,1fr)}
+  .ra-biopsy{grid-template-columns:1fr}
+  .ra-biopsy__media{min-height:320px}
+  .ra-faq__layout{grid-template-columns:1fr;gap:28px}
+  .ra-tabs{position:static;display:flex;overflow-x:auto;scrollbar-width:none;margin:0 -24px;padding:2px 24px 6px}
+  .ra-tabs::-webkit-scrollbar{display:none}
+  .ra-mam .ra-tab{flex:none;width:auto;white-space:nowrap;border-radius:var(--pill);padding:13px 18px}
+}
+@media (max-width:767px){
+  .ra-mam{font-size:17px}
+  .ra-section{padding:64px 0}
+  .ra-h2{font-size:29px}
+  .ra-lead{font-size:18px}
+  .ra-head{margin-bottom:34px}
+  /* Móvil: la foto arriba (sujeto visible) y el texto debajo sobre fondo claro */
+  .ra-hero{min-height:0;display:block}
+  .ra-hero__bg{position:relative;inset:auto;height:300px}
+  .ra-hero__bg img{object-position:78% 40%}
+  .ra-hero::before{inset:0 0 auto 0;height:300px;background:linear-gradient(180deg,rgba(226,243,250,0) 60%,var(--sky-50) 100%)}
+  .ra-hero > .ra-wrap{padding-top:0;padding-bottom:56px}
+  .ra-crumbs{margin:-6px 0 0;font-size:14px}
+  .ra-hero__text{margin:18px 0 0;padding:28px 22px 26px;background:rgba(10,18,32,.86);position:relative}
+  .ra-mam .ra-hero__title{font-size:29px}
+  .ra-hero__sub{font-size:18px}
+  .ra-actions{flex-direction:column}
+  .ra-mam .ra-btn{width:100%}
+  .ra-tabs{margin:0 -16px;padding:2px 16px 6px}
+  .ra-why__grid,.ra-results__grid,.ra-contact__grid{grid-template-columns:1fr;gap:36px}
+  .ra-why__text p{font-size:19px}
+  .ra-pillar:nth-child(2){margin-left:0}
+  .ra-cards,.ra-mini{grid-template-columns:1fr}
+  .ra-card{padding:32px 26px}
+  .ra-biopsy__body{padding:34px 24px}
+  .ra-biopsy__body h3{font-size:26px}
+  .ra-biopsy__media{min-height:240px}
+  .ra-mini__item{padding:26px 22px}
+  .ra-stats__grid{grid-template-columns:1fr}
+  .ra-stat__num{font-size:46px}
+  .ra-team__grid{grid-template-columns:1fr;max-width:420px;margin:0 auto}
+  .ra-steps{padding:28px 22px}
+  .ra-info{padding:26px 22px}
+  .ra-map,.ra-map iframe{min-height:320px}
+  .ra-qa summary{font-size:17px;padding:18px 18px}
+  .ra-qa__a{padding:0 18px 20px;font-size:17px}
+}
+</style>
+
+<main id="content" class="ra-mam">
+
+  <!-- ===================== INICIO / HERO ===================== -->
+  <section class="ra-hero" id="inicio" aria-labelledby="ra-hero-title">
+    <div class="ra-hero__bg">
+      <img src="assets/hero-imagenes-mamarias.jpg" width="2720" height="1536" alt="Tecnóloga acompañando a una paciente junto al mamógrafo en la Unidad de Imágenes Mamarias" fetchpriority="high">
+    </div>
+    <div class="ra-wrap">
+      <nav class="ra-crumbs" aria-label="Ruta de navegación">
+        <a href="https://radiologosasociados.com/">Inicio</a><span aria-hidden="true">›</span>
+        <span>Unidades Especializadas</span><span aria-hidden="true">›</span>
+        <span aria-current="page">Imágenes Mamarias</span>
+      </nav>
+        <div class="ra-hero__text">
+          <span class="ra-eyebrow">Unidad de Imágenes Mamarias</span>
+          <h1 class="ra-hero__title" id="ra-hero-title">En Radiólogos Asociados cuidamos de ti con la tecnología más avanzada en <em>detección temprana y diagnóstico mamario.</em></h1>
+          <p class="ra-hero__sub">Un espacio diseñado para la salud mamaria, con un equipo médico especializado y comprometido con tu bienestar.</p>
+          <div class="ra-actions">
+            <a class="ra-btn ra-btn--primary" href="/contacto">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4.5" width="18" height="16" rx="3"/><path d="M8 2.5v4M16 2.5v4M3 10h18M12 13.5v4M10 15.5h4"/></svg>
+              Agendar mi Cita
+            </a>
+            <a class="ra-btn ra-btn--outline" href="https://radiologos.medportal.co/login" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+              Ver mis Resultados
+            </a>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+  <!-- ===================== POR QUÉ ELEGIRNOS ===================== -->
+  <section class="ra-section ra-why" id="por-que-elegirnos" aria-labelledby="ra-why-title">
+    <div class="ra-wrap ra-why__grid">
+      <div class="ra-why__text ra-reveal">
+        <span class="ra-eyebrow">Unidad de Imágenes Mamarias</span>
+        <h2 class="ra-h2" id="ra-why-title">Por qué elegirnos</h2>
+        <p>En nuestra Unidad de Imágenes Mamarias, sabemos que <strong>la prevención y el diagnóstico a tiempo salvan vidas.</strong> Te ofrecemos un entorno seguro, cómodo y con la tecnología diagnóstica de mayor precisión para que te sientas tranquila en cada paso de tu estudio.</p>
+      </div>
+      <ul class="ra-pillars ra-reveal" aria-label="Lo que te ofrecemos">
+        <li class="ra-pillar">
+          <span class="ra-pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+          <h3>Un entorno seguro</h3>
+        </li>
+        <li class="ra-pillar">
+          <span class="ra-pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-6.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+          <h3>Un entorno cómodo</h3>
+        </li>
+        <li class="ra-pillar">
+          <span class="ra-pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></span>
+          <h3>Tecnología diagnóstica de mayor precisión</h3>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="ra-section ra-services" id="servicios" aria-labelledby="ra-serv-title">
+    <div class="ra-wrap">
+      <header class="ra-head ra-reveal">
+        <span class="ra-eyebrow">Estudios disponibles</span>
+        <h2 class="ra-h2" id="ra-serv-title">Servicios</h2>
+        <p class="ra-lead">Contamos con todas las técnicas de imagen mamaria necesarias para realizar un diagnóstico preciso de la patología mamaria:</p>
+      </header>
+
+      <div class="ra-cards">
+        <article class="ra-card ra-reveal">
+          <div class="ra-card__top">
+            <span class="ra-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7 16c1.5-4 3-6 5-6s3.5 2 5 6"/><circle cx="12" cy="7.5" r="1.3"/></svg></span>
+            <span class="ra-card__num" aria-hidden="true">01</span>
+          </div>
+          <h3>Mamografía digital de alta resolución</h3>
+          <p>Estudio fundamental para la detección oportuna del cáncer de mama, Gold standard en detección del carcinoma in situ, capaz de identificar lesiones antes de que sean palpables. Utilizamos equipos de baja dosis de radiación para tu máxima seguridad.</p>
+        </article>
+        <article class="ra-card ra-reveal">
+          <div class="ra-card__top">
+            <span class="ra-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5-8 4.5-8-4.5z"/><path d="M4 12l8 4.5 8-4.5"/><path d="M4 16.5L12 21l8-4.5"/></svg></span>
+            <span class="ra-card__num" aria-hidden="true">02</span>
+          </div>
+          <h3>Tomosíntesis (Mamografía 3D)</h3>
+          <p>Tecnología de vanguardia que permite evaluar el tejido mamario capa por capa. Es ideal para mamas densas, ya que reduce la necesidad de repetir estudios y aumenta la precisión del diagnóstico.</p>
+        </article>
+        <article class="ra-card ra-reveal">
+          <div class="ra-card__top">
+            <span class="ra-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 9a7 7 0 0 1 14 0"/><path d="M8 9a4 4 0 0 1 8 0"/><path d="M11 9h2l1 10a2 2 0 0 1-2 2 2 2 0 0 1-2-2z"/></svg></span>
+            <span class="ra-card__num" aria-hidden="true">03</span>
+          </div>
+          <h3>Ecografía de mama de alta resolución</h3>
+          <p>Estudio indoloro que utiliza ultrasonido. Es ideal para evaluar nódulos, determinar composición de las lesiones, guiar biopsias o examinar a pacientes jóvenes o embarazadas.</p>
+        </article>
+        <article class="ra-card ra-reveal">
+          <div class="ra-card__top">
+            <span class="ra-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.5"/><path d="M3 12h4.5M16.5 12H21"/></svg></span>
+            <span class="ra-card__num" aria-hidden="true">04</span>
+          </div>
+          <h3>Resonancia de mama</h3>
+          <p>Estudio especializado de alta sensibilidad utilizado para la evaluación detallada de casos complejos, pacientes con factores de riesgo, seguimiento de implantes mamarios, planificación y respuesta a tratamientos.</p>
+        </article>
+      </div>
+
+      <!-- Biopsias -->
+      <div class="ra-biopsy ra-reveal" id="biopsias">
+        <div class="ra-biopsy__media">
+          <img src="https://radiologosasociados.com/wp-content/uploads/2024/06/Todo-lo-que-debe-saber-acerca-de-las-Biopsias.jpg" width="2000" height="1000" alt="Biopsia de mama guiada por ultrasonido" loading="lazy">
+        </div>
+        <div class="ra-biopsy__body">
+          <span class="ra-eyebrow">Procedimientos intervencionistas</span>
+          <h3>Biopsias de mama</h3>
+          <div class="ra-chips" aria-label="Tipos de biopsia">
+            <span class="ra-chip">Por estereotaxia</span>
+            <span class="ra-chip">Guiada por ultrasonido</span>
+            <span class="ra-chip">Asistida al vacío</span>
+          </div>
+          <h4>Indicaciones de Biopsia de Mama asistida al Vacío</h4>
+          <ul class="ra-checks">
+            <li>Microcalcificaciones sospechosas.</li>
+            <li>Lesiones pequeñas (&lt;1 cm) con riesgo de error de muestreo en Tru-Cut.</li>
+            <li>Lesiones complejas menores de 2 cm.</li>
+            <li>Lesiones no masa menores de 15 mm (alto riesgo de falla del trucut).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ra-mini">
+        <article class="ra-mini__item ra-reveal">
+          <span class="ra-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6-5.6-6-11a6 6 0 0 1 12 0c0 5.4-6 11-6 11z"/><circle cx="12" cy="10" r="2.2"/></svg></span>
+          <div><h3>Marcaje con Arpón</h3><p>Guiada por ultrasonido y estereotaxia.</p></div>
+        </article>
+        <article class="ra-mini__item ra-reveal">
+          <span class="ra-card__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5v9M7.5 12h9"/></svg></span>
+          <div><h3>Resección de lesiones mamarias al vacío</h3></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DATOS RELEVANTES ===================== -->
+  <section class="ra-section ra-stats" id="datos" aria-labelledby="ra-stats-title">
+    <svg class="ra-stats__rings" viewBox="0 0 400 400" fill="none" stroke="currentColor" aria-hidden="true"><circle cx="200" cy="200" r="196" stroke-width="3"/><circle cx="200" cy="200" r="156" stroke-width="3"/><circle cx="200" cy="200" r="116" stroke-width="3"/><circle cx="200" cy="200" r="76" stroke-width="3"/></svg>
+    <div class="ra-wrap">
+      <header class="ra-head ra-reveal">
+        <span class="ra-eyebrow">Prevención</span>
+        <h2 class="ra-h2" id="ra-stats-title">Datos Relevantes en la Prevención del Cáncer de seno</h2>
+        <p class="ra-lead">Cuidarte, estar atenta a tu cuerpo y detectar a tiempo puede hacer la diferencia.</p>
+      </header>
+      <div class="ra-stats__grid">
+        <div class="ra-stat ra-reveal">
+          <div class="ra-stat__num"><small>1 de cada</small><span data-count="8">8</span></div>
+          <p>mujeres recibirán un diagnóstico de cáncer de seno en algún momento de su vida.</p>
+        </div>
+        <div class="ra-stat ra-reveal">
+          <div class="ra-stat__num">5 a <span data-count="10">10</span>%</div>
+          <p>de los casos están relacionados con mutaciones genéticas heredadas.</p>
+        </div>
+        <div class="ra-stat ra-reveal">
+          <div class="ra-stat__num"><span data-count="40">40</span></div>
+          <p>a partir de los 40 años se recomiendan mamografías anuales o antes si tienes factores de riesgo.</p>
+        </div>
+        <div class="ra-stat ra-reveal">
+          <div class="ra-stat__num"><span data-count="90">90</span>%</div>
+          <p>es la tasa de supervivencia cuando el cáncer de seno se detecta temprano.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== EQUIPO MÉDICO ===================== -->
+  <section class="ra-section ra-team" id="especialistas" aria-labelledby="ra-team-title">
+    <div class="ra-wrap">
+      <header class="ra-head ra-head--center ra-reveal">
+        <span class="ra-eyebrow">Equipo médico</span>
+        <h2 class="ra-h2" id="ra-team-title">Especialistas en Salud Mamaria</h2>
+        <p class="ra-lead">Nuestro equipo está integrado por médicos radiólogos subespecialistas en imagen mamaria, tecnólogos certificados y personal de enfermería enfocado en brindarte una atención cálida, respetuosa y con el más alto estándar científico.</p>
+      </header>
+      <div class="ra-team__grid">
+        <article class="ra-doc ra-reveal">
+          <div class="ra-doc__photo"><img src="https://radiologosasociados.com/wp-content/uploads/2026/09/Dra__indira-768x965.jpg" width="768" height="965" alt="Dra. Indira Carrillo Beleño" loading="lazy"></div>
+          <div class="ra-doc__body">
+            <h3>DRA. INDIRA CARRILLO BELEÑO</h3>
+            <ul class="ra-creds">
+              <li><strong>Pregrado</strong>Médico y Cirujano - Universidad Libre</li>
+              <li><strong>Especialidad</strong>Diagnóstico por Imágenes - Universidad del Salvador</li>
+              <li><strong>Subespecialidad</strong>Fellow en Diagnóstico Mamario - Diagnóstico Médico Buenos Aires</li>
+            </ul>
+          </div>
+        </article>
+        <article class="ra-doc ra-reveal">
+          <div class="ra-doc__photo"><img src="https://radiologosasociados.com/wp-content/uploads/2026/09/Dra.-Dora-Barrios-2-768x1024.jpg" width="768" height="1024" alt="Dra. Dora Barrios Pérez" loading="lazy"></div>
+          <div class="ra-doc__body">
+            <h3>DRA. DORA BARRIOS PÉREZ</h3>
+            <ul class="ra-creds">
+              <li><strong>Pregrado</strong>Médico y Cirujano - Universidad Libre.</li>
+              <li><strong>Especialidad</strong>Diagnóstico por Imágenes - Universidad del Salvador.</li>
+              <li><strong>Subespecialidad</strong>Fellow en Diagnóstico Mamario - TCBA Buenos Aires.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="ra-doc ra-reveal">
+          <div class="ra-doc__photo"><img src="https://radiologosasociados.com/wp-content/uploads/2026/09/Dra.-yeni-768x1024.jpg" width="768" height="1024" alt="Dra. Yenis Mercado Carrillo" loading="lazy"></div>
+          <div class="ra-doc__body">
+            <h3>DRA. YENIS MERCADO CARRILLO</h3>
+            <ul class="ra-creds">
+              <li><strong>Pregrado</strong>Médico - Universidad Libre de Barranquilla.</li>
+              <li><strong>Especialidad</strong>Radiología e Imágenes Diagnósticas - Universidad Metropolitana de Barranquilla.</li>
+              <li><strong>Subespecialidad</strong>Fellow en Entrenamiento Avanzado en Imágenes Mamarias y de la Mujer - Fundación Santa Fe de Bogotá.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PORTAL DE RESULTADOS ===================== -->
+  <section class="ra-section ra-results" id="resultados" aria-labelledby="ra-res-title">
+    <div class="ra-wrap ra-results__grid">
+      <div class="ra-results__text ra-reveal">
+        <span class="ra-eyebrow">Portal de Resultados · Área de Pacientes</span>
+        <h2 class="ra-h2" id="ra-res-title">Consulta tus Resultados en Línea</h2>
+        <p>Para tu comodidad, ya no necesitas trasladarte para recoger tus placas o informes médicos. Accede a nuestra plataforma segura las 24 horas del día.</p>
+        <div class="ra-actions">
+          <a class="ra-btn ra-btn--sky" href="https://radiologos.medportal.co/login" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+            Ver mis Resultados
+          </a>
+        </div>
+      </div>
+      <div class="ra-steps ra-reveal">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Instrucciones</h3>
+        <ol>
+          <li>Ingresa tu número de identificación o usuario.</li>
+          <li>Introduce la contraseña proporcionada el día de tu estudio.</li>
+          <li>Descarga tus imágenes en alta definición y el reporte firmado por el médico radiólogo.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACTO Y SEDES ===================== -->
+  <section class="ra-section ra-contact" id="contacto" aria-labelledby="ra-contact-title">
+    <div class="ra-wrap">
+      <header class="ra-head ra-reveal">
+        <span class="ra-eyebrow">Contacto y sedes</span>
+        <h2 class="ra-h2" id="ra-contact-title">Estamos aquí para atenderte</h2>
+      </header>
+      <div class="ra-contact__grid">
+        <div class="ra-contact__cols ra-reveal">
+          <div class="ra-info">
+            <h3>Información de Contacto</h3>
+            <ul>
+              <li><span class="ra-info__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></span>
+                <div><small>Teléfono de Citas</small><a href="tel:+576053000000">+57 (605) 300-0000</a></div></li>
+              <li><span class="ra-info__ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3 2.4.9 2.9.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 21.8c-1.7 0-3.4-.5-4.9-1.3l-.4-.2-3.6.9 1-3.5-.2-.4A9.8 9.8 0 1 1 12 21.8zm0-21.6A11.8 11.8 0 0 0 1.9 18l-1.7 6 6.2-1.6A11.8 11.8 0 1 0 12 .2z"/></svg></span>
+                <div><small>WhatsApp Directo</small><a href="https://wa.me/573001234567" target="_blank" rel="noopener">+57 300 123 4567</a></div></li>
+              <li><span class="ra-info__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="M3 6.5l9 6.5 9-6.5"/></svg></span>
+                <div><small>Correo Electrónico</small><a href="mailto:citas.mamaria@clinica.com">citas.mamaria@clinica.com</a></div></li>
+            </ul>
+          </div>
+          <div class="ra-info">
+            <h3>Ubicación y Horarios</h3>
+            <ul>
+              <li><span class="ra-info__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6-7-11.5a7 7 0 0 1 14 0C19 15 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+                <div><small>Dirección</small><span class="ra-val">Calle 78 #57-215 Unidad médica Villa Country.</span></div></li>
+              <li><span class="ra-info__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+                <div><small>Horario de Atención</small><span class="ra-val">Lunes a Viernes de 7:00 a.m. a 6:00 p.m.<br>Sábados de 8:00 a.m. a 12m.</span></div></li>
+            </ul>
+          </div>
+        </div>
+        <div class="ra-map ra-reveal">
+          <iframe title="Mapa: Calle 78 #57-215, Unidad médica Villa Country, Barranquilla" src="https://www.google.com/maps?q=Calle%2078%20%2357-215%2C%20Barranquilla%2C%20Atl%C3%A1ntico&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PREGUNTAS FRECUENTES ===================== -->
+  <section class="ra-section ra-faq" id="preguntas-frecuentes" aria-labelledby="ra-faq-title">
+    <div class="ra-wrap">
+      <header class="ra-head ra-reveal">
+        <span class="ra-eyebrow">Resolvemos tus dudas</span>
+        <h2 class="ra-h2" id="ra-faq-title">Preguntas Frecuentes</h2>
+      </header>
+      <div class="ra-faq__layout">
+        <div class="ra-tabs" role="tablist" aria-label="Categorías de preguntas frecuentes">
+          <button class="ra-tab" role="tab" id="tab-prep" aria-controls="panel-prep" aria-selected="true">Preparación y Estudios <span class="ra-tab__count">4</span></button>
+          <button class="ra-tab" role="tab" id="tab-tipos" aria-controls="panel-tipos" aria-selected="false" tabindex="-1">Tipos de Estudios y Diferencias <span class="ra-tab__count">2</span></button>
+          <button class="ra-tab" role="tab" id="tab-seg" aria-controls="panel-seg" aria-selected="false" tabindex="-1">Seguridad y Comodidad <span class="ra-tab__count">3</span></button>
+          <button class="ra-tab" role="tab" id="tab-res" aria-controls="panel-res" aria-selected="false" tabindex="-1">Resultados y Seguimiento <span class="ra-tab__count">3</span></button>
+          <button class="ra-tab" role="tab" id="tab-proc" aria-controls="panel-proc" aria-selected="false" tabindex="-1">Procedimientos Intervencionistas (Biopsias y Marcajes) <span class="ra-tab__count">9</span></button>
+        </div>
+
+        <div class="ra-panels">
+          <div class="ra-panel" role="tabpanel" id="panel-prep" aria-labelledby="tab-prep">
+            <h3>Preparación y Estudios</h3>
+            <details class="ra-qa" open><summary>¿Cómo debo prepararme para una mamografía?</summary><div class="ra-qa__a">El día del estudio no apliques desodorante, talco, perfume ni crema en las mamas ni en las axilas, ya que estos productos pueden aparecer como manchas o artificios en las imágenes. Te recomendamos asistir con ropa de dos piezas (blusa y pantalón/falda) para mayor comodidad.</div></details>
+            <details class="ra-qa"><summary>¿A qué edad debo comenzar a hacerme la mamografía?</summary><div class="ra-qa__a">De forma general, se recomienda realizar una mamografía anual a partir de los 40 años. Si tienes antecedentes familiares de cáncer de mama, consulta con tu médico para iniciar la evaluación antes.</div></details>
+            <details class="ra-qa"><summary>¿En qué momento del mes es mejor programar mi cita?</summary><div class="ra-qa__a">Si bien el periodo menstrual no afecta los hallazgos de imágenes, se recomienda programar el estudio la semana posterior a tu menstruación. Durante este período, las mamas están menos sensibles y la compresión será mucho más tolerable.</div></details>
+            <details class="ra-qa"><summary>¿Qué documentos debo llevar el día de mi estudio?</summary><div class="ra-qa__a">Es indispensable traer tu orden médica vigente, documento de identidad, y algo muy importante, tus estudios mamarios anteriores (placas o CD e informes) para poder realizar una comparación.</div></details>
+          </div>
+
+          <div class="ra-panel" role="tabpanel" id="panel-tipos" aria-labelledby="tab-tipos" hidden>
+            <h3>Tipos de Estudios y Diferencias</h3>
+            <details class="ra-qa"><summary>¿Cuál es la diferencia entre una mamografía y una ecografía mamaria?</summary><div class="ra-qa__a">La mamografía utiliza rayos X a dosis muy bajas y es el mejor método para detectar microcalcificaciones, distorsiones de la arquitectura y tumores muy pequeños. La ecografía utiliza ultrasonido y sirve para evaluar y caracterizar los nódulos y la región axilar. Ambos estudios son complementarios; uno no reemplaza al otro.</div></details>
+            <details class="ra-qa"><summary>¿Qué es la tomosíntesis o mamografía 3D?</summary><div class="ra-qa__a">Es una tecnología avanzada que toma múltiples imágenes del tejido mamario desde diferentes ángulos para crear una reconstrucción en tres dimensiones. Es especialmente útil en mujeres con mamas densas, ya que reduce la superposición de tejidos.</div></details>
+          </div>
+
+          <div class="ra-panel" role="tabpanel" id="panel-seg" aria-labelledby="tab-seg" hidden>
+            <h3>Seguridad y Comodidad</h3>
+            <details class="ra-qa"><summary>¿La mamografía duele?</summary><div class="ra-qa__a">Puedes sentir una presión firme durante unos pocos segundos por cada toma. La compresión es totalmente necesaria para aplanar el tejido, obtener una imagen nítida y usar la menor cantidad de radiación posible. Si sientes demasiado dolor, avísale al técnico.</div></details>
+            <details class="ra-qa"><summary>¿Es segura la radiación de una mamografía?</summary><div class="ra-qa__a">Sí. Los equipos modernos utilizan dosis de radiación extremadamente bajas. El beneficio de detectar a tiempo un problema es inmensamente mayor que el mínimo riesgo por la exposición.</div></details>
+            <details class="ra-qa"><summary>¿Puedo hacerme los estudios si tengo implantes mamarios?</summary><div class="ra-qa__a">Sí, totalmente. Debes informar al personal técnico antes de empezar. Se utilizan técnicas especiales (como la maniobra de Eklund) para desplazar el implante y adquirir imágenes del tejido mamario sin dañarlo.</div></details>
+          </div>
+
+          <div class="ra-panel" role="tabpanel" id="panel-res" aria-labelledby="tab-res" hidden>
+            <h3>Resultados y Seguimiento</h3>
+            <details class="ra-qa"><summary>¿Qué significa el resultado "BI-RADS" en mi informe?</summary><div class="ra-qa__a">BI-RADS es un sistema estandarizado internacional para clasificar los hallazgos. Varía del 0 (estudio incompleto, se necesitan más pruebas) al 6 (cáncer ya confirmado). Tu médico te explicará el significado exacto de tu puntuación.</div></details>
+            <details class="ra-qa"><summary>¿Cuánto tiempo tardan en entregar los resultados?</summary><div class="ra-qa__a">Por lo general, los informes y las imágenes están listos en un plazo de 24 a 48 horas hábiles, dependiendo también del requerimiento de estudios adicionales.</div></details>
+            <details class="ra-qa"><summary>¿Si me piden un estudio adicional, significa que tengo cáncer?</summary><div class="ra-qa__a">No necesariamente. En muchos casos, los radiólogos solicitan proyecciones adicionales o una ecografía simplemente para aclarar una zona que se veía difusa o para estar completamente seguros de que todo está bien.</div></details>
+          </div>
+
+          <div class="ra-panel" role="tabpanel" id="panel-proc" aria-labelledby="tab-proc" hidden>
+            <h3>Procedimientos Intervencionistas (Biopsias y Marcajes)</h3>
+            <details class="ra-qa"><summary>¿Qué es una biopsia mamaria y por qué me la solicitaron?</summary><div class="ra-qa__a">Una biopsia consiste en extraer una pequeña muestra de tejido de una zona indicada para analizarla en un laboratorio. Se solicita cuando el radiólogo detecta un hallazgo en la mamografía o ecografía (generalmente clasificado como BI-RADS 4 o 5) que requiere un diagnóstico definitivo.</div></details>
+            <details class="ra-qa"><summary>¿Cuál es la diferencia entre una biopsia Core (Trucut) y una BACAF?</summary><div class="ra-qa__a">La biopsia Core utiliza una aguja gruesa especial para extraer pequeños cilindros de tejido, ideal para evaluar nódulos sólidos. La BACAF (Biopsia por Aspiración con Aguja Fina) usa una aguja delgada para extraer líquido o células y suele emplearse para vaciar quistes o analizar ganglios.</div></details>
+            <details class="ra-qa"><summary>¿Qué es una biopsia por estereotaxia?</summary><div class="ra-qa__a">Es un procedimiento guiado por mamografía digital de alta precisión. Se utiliza principalmente para biopsiar microcalcificaciones o lesiones muy pequeñas que no se ven en la ecografía, permitiendo extraer la muestra de forma rápida y sin necesidad de cirugía abierta.</div></details>
+            <details class="ra-qa"><summary>¿El procedimiento duele? ¿Se usa anestesia?</summary><div class="ra-qa__a">Todos estos procedimientos se realizan bajo anestesia local, por lo que el área estará adormecida. Es normal sentir una sensación de presión o un "clic" audible cuando el instrumento toma la muestra, pero el dolor es mínimo. Al pasar el efecto de la anestesia, podrías sentir una molestia leve que se controla con analgésicos comunes.</div></details>
+            <details class="ra-qa"><summary>¿Cómo debo prepararme para una biopsia mamaria?</summary><div class="ra-qa__a">No es necesario ayuno estricto a menos que se te indique lo contrario, pero se sugiere comer algo ligero. Es fundamental que informes si estás tomando anticoagulantes (como aspirina o warfarina). Acude con ropa cómoda de dos piezas y acompañada por un adulto.</div></details>
+            <details class="ra-qa"><summary>¿Qué es un marcaje mamario (con arpón o clip) y para qué sirve?</summary><div class="ra-qa__a">Es la colocación de una guía milimétrica (un hilo de metal delgado llamado arpón o un diminuto clip de titanio) directamente en la lesión. Sirve para señalarle al cirujano o al radiólogo el lugar exacto que debe retirar o monitorear en procedimientos posteriores.</div></details>
+            <details class="ra-qa"><summary>¿Qué cuidados debo tener después de la biopsia?</summary><div class="ra-qa__a">Debes guardar reposo relativo según indicación del radiólogo intervencionista, evitando hacer esfuerzos físicos pesados o ejercicio las primeras 24 a 48 horas. Colocar una compresa fría sobre la zona ayuda a reducir la inflamación. No retires los vendajes ni sumerjas el área en agua (ducha sí, piscina o tina no) hasta que tu médico lo autorice.</div></details>
+            <details class="ra-qa"><summary>¿La biopsia deja cicatriz?</summary><div class="ra-qa__a">La incisión en la piel es milimétrica (de apenas unos 2 a 5 milímetros), por lo que no requiere puntos de sutura, solo cintas adhesivas quirúrgicas. La cicatriz resultante suele ser prácticamente imperceptible con el tiempo.</div></details>
+            <details class="ra-qa"><summary>¿Cuánto tardan los resultados de patología?</summary><div class="ra-qa__a">El análisis del tejido en el laboratorio de patología suele tardar entre 7 y 10 días hábiles, dependiendo el laboratorio que procesa la muestra.</div></details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script id="ra-mamarias-js">
+(function(){
+  var root = document.querySelector('.ra-mam');
+  if(!root) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* 1) Offset del header fijo de Elementor (anclas y pestañas fijas) */
+  function headerBottom(){
+    var h = 0;
+    document.querySelectorAll('header .elementor-sticky--active').forEach(function(el){
+      var r = el.getBoundingClientRect();
+      if(r.height > 0 && getComputedStyle(el).position === 'fixed') h = Math.max(h, r.bottom);
+    });
+    return Math.round(h);
+  }
+  var ticking = false;
+  function syncTop(){ ticking = false; root.style.setProperty('--nav-top', headerBottom() + 'px'); }
+  function onScroll(){ if(!ticking){ ticking = true; requestAnimationFrame(syncTop); } }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  window.addEventListener('resize', onScroll);
+  syncTop();
+
+  /* 2) Revelado y contadores */
+  var counters = root.querySelectorAll('[data-count]');
+  function countUp(el){
+    var end = parseInt(el.getAttribute('data-count'), 10), start = null, dur = 1400;
+    if(reduce){ el.textContent = end; return; }
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.max(1, Math.round(end * e));
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting) return;
+        en.target.classList.add('is-in');
+        en.target.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(en.target);
+      });
+    }, {threshold:.15, rootMargin:'0px 0px -40px 0px'});
+    root.querySelectorAll('.ra-reveal').forEach(function(el){ io.observe(el); });
+  } else {
+    root.querySelectorAll('.ra-reveal').forEach(function(el){ el.classList.add('is-in'); });
+  }
+
+  /* 3) Pestañas de preguntas frecuentes (accesibles con teclado) */
+  var tabs = Array.prototype.slice.call(root.querySelectorAll('.ra-tab'));
+  function select(tab, focus){
+    tabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+    });
+    if(focus) tab.focus();
+    tab.scrollIntoView({block:'nearest', inline:'nearest', behavior: reduce ? 'auto' : 'smooth'});
+  }
+  tabs.forEach(function(tab, i){
+    tab.addEventListener('click', function(){ select(tab); });
+    tab.addEventListener('keydown', function(e){
+      var k = e.key, n = null;
+      if(k === 'ArrowRight' || k === 'ArrowDown') n = tabs[(i + 1) % tabs.length];
+      if(k === 'ArrowLeft' || k === 'ArrowUp') n = tabs[(i - 1 + tabs.length) % tabs.length];
+      if(k === 'Home') n = tabs[0];
+      if(k === 'End') n = tabs[tabs.length - 1];
+      if(n){ e.preventDefault(); select(n, true); }
+    });
+  });
+})();
+</script>
