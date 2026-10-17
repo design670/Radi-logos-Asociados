@@ -61,13 +61,9 @@
 .ra-hero__bg{position:absolute;inset:0;z-index:-2}
 .ra-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:78% 30%}
 .ra-hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(232,241,249,.55) 0%,rgba(232,241,249,0) 45%)}
-.ra-hero > .ra-wrap{width:100%;flex:1;display:flex;flex-direction:column;padding-top:32px;padding-bottom:72px}
-.ra-crumbs{display:flex;flex-wrap:wrap;gap:8px;font-size:15px;color:var(--navy);margin-bottom:auto}
-.ra-crumbs a{text-decoration:underline;text-underline-offset:3px}
-.ra-crumbs a:hover{color:var(--sky-600)}
-.ra-crumbs span[aria-hidden]{opacity:.5}
+.ra-hero > .ra-wrap{width:100%;flex:1;display:flex;flex-direction:column;padding-top:56px;padding-bottom:56px}
 /* Recuadro oscuro translúcido sobre la foto, como en las referencias */
-.ra-hero__text{max-width:640px;margin:36px 0 auto;padding:38px 42px 40px;border-radius:var(--radius-lg);background:rgba(31,44,66,.76);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;box-shadow:0 24px 60px rgba(31,44,66,.25)}
+.ra-hero__text{max-width:640px;margin:auto 0;padding:38px 42px 40px;border-radius:var(--radius-lg);background:rgba(31,44,66,.76);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);color:#fff;box-shadow:0 24px 60px rgba(31,44,66,.25)}
 .ra-hero__text .ra-eyebrow{color:#fff}
 .ra-mam .ra-hero__title{font-size:42px;line-height:1.14;letter-spacing:-.01em;color:#fff}
 .ra-hero__title em{font-style:normal;color:#F6C3D2}
@@ -239,7 +235,6 @@
   .ra-hero__bg img{object-position:78% 40%}
   .ra-hero::before{inset:0 0 auto 0;height:300px;background:linear-gradient(180deg,rgba(232,241,249,0) 60%,var(--sky-50) 100%)}
   .ra-hero > .ra-wrap{padding-top:0;padding-bottom:56px}
-  .ra-crumbs{margin:-6px 0 0;font-size:14px}
   .ra-hero__text{margin:18px 0 0;padding:28px 22px 26px;background:rgba(31,44,66,.9);position:relative}
   .ra-mam .ra-hero__title{font-size:29px}
   .ra-hero__sub{font-size:18px}
@@ -274,11 +269,6 @@
       <img src="assets/hero-imagenes-mamarias.jpg" width="2720" height="1536" alt="Tecnóloga acompañando a una paciente junto al mamógrafo en la Unidad de Imágenes Mamarias" fetchpriority="high">
     </div>
     <div class="ra-wrap">
-      <nav class="ra-crumbs" aria-label="Ruta de navegación">
-        <a href="https://radiologosasociados.com/">Inicio</a><span aria-hidden="true">›</span>
-        <span>Unidades Especializadas</span><span aria-hidden="true">›</span>
-        <span aria-current="page">Imágenes Mamarias</span>
-      </nav>
         <div class="ra-hero__text">
           <span class="ra-eyebrow">Unidad de Imágenes Mamarias</span>
           <h1 class="ra-hero__title" id="ra-hero-title">En Radiólogos Asociados cuidamos de ti con la tecnología más avanzada en <em>detección temprana y diagnóstico mamario.</em></h1>
