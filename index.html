@@ -358,19 +358,37 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 .ra-mam .ra-hero__text .ra-btn--outline:hover{background:#fff;color:var(--navy);border-color:#fff}
 
 /* ---------- POR QUÉ ELEGIRNOS ---------- */
-.ra-why{background:#fff}
-.ra-why__grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
-.ra-why__text p{font-size:18px;line-height:1.7;color:var(--navy);margin-top:22px}
-.ra-why__text p strong{color:var(--rose-text);font-weight:700}
-.ra-pillars{display:grid;gap:16px}
-.ra-pillar{display:flex;align-items:center;gap:20px;padding:24px 26px;border-radius:var(--radius);background:var(--sky-25);border:1px solid var(--line);transition:transform .25s,box-shadow .25s}
-.ra-pillar:nth-child(2){margin-left:36px;background:var(--rose-600);border-color:var(--rose-600)}
-.ra-pillar:nth-child(2) h3{color:var(--navy)}
-.ra-pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow-sm)}
-.ra-pillar__ico{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#fff;color:var(--sky-600);box-shadow:var(--shadow-sm)}
-.ra-pillar:nth-child(2) .ra-pillar__ico{color:var(--rose-text)}
+/* Encabezado en dos columnas; abajo foto con tarjeta translúcida + pilares apilados */
+.ra-why{background:linear-gradient(180deg,#fff 0%,var(--sky-25) 100%)}
+.ra-why__head{display:grid;grid-template-columns:minmax(0,.75fr) minmax(0,1.25fr);gap:72px;align-items:start;margin-bottom:56px}
+.ra-why__head p{font-size:22px;line-height:1.6;color:var(--navy)}
+.ra-why__head p strong{color:var(--rose-text);font-weight:700}
+.ra-why__grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:28px;align-items:stretch}
+.ra-why__media{position:relative;margin:0;min-height:320px;border-radius:var(--radius-lg);overflow:hidden;background:var(--sky-50);box-shadow:var(--shadow);isolation:isolate}
+.ra-why__media > img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:58% 30%;transition:transform .8s ease}
+.ra-why__media:hover > img{transform:scale(1.03)}
+.ra-why__media::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(31,44,66,0) 55%,rgba(31,44,66,.45) 100%)}
+.ra-mam .ra-why__team{position:absolute;left:24px;right:24px;bottom:24px;display:flex;align-items:center;gap:18px;padding:16px 18px 16px 20px;border-radius:var(--radius);background:rgba(31,44,66,.55);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.2);color:#fff;transition:background-color .25s}
+.ra-mam .ra-why__team:hover{background:rgba(31,44,66,.72)}
+.ra-why__avatars{display:flex;flex:none}
+.ra-why__avatars img{width:48px;height:48px;border-radius:50%;object-fit:cover;object-position:50% 18%;border:2px solid #fff;background:var(--sky-50)}
+.ra-why__avatars img + img{margin-left:-14px}
+.ra-why__team-txt{display:flex;flex-direction:column;gap:2px;min-width:0}
+.ra-why__team-txt strong{font-size:18px;font-weight:700;line-height:1.25}
+.ra-why__team-txt span{font-size:14px;color:rgba(255,255,255,.82)}
+.ra-why__team-go{flex:none;margin-left:auto;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--rose-600);color:var(--navy);transition:transform .25s}
+.ra-why__team-go svg{width:20px;height:20px}
+.ra-why__team:hover .ra-why__team-go{transform:translateX(3px)}
+.ra-pillars{display:grid;grid-template-rows:repeat(3,1fr);gap:20px}
+.ra-pillar{position:relative;display:flex;align-items:center;gap:22px;padding:30px;border-radius:var(--radius-lg);background:#fff;border:1px solid var(--line);box-shadow:var(--shadow-sm);transition:transform .25s,box-shadow .25s}
+.ra-pillar:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.ra-pillar:nth-child(2){background:var(--rose-600);border-color:var(--rose-600)}
+.ra-pillar__num{flex:none;order:3;margin-left:auto;font-size:15px;font-weight:700;letter-spacing:.08em;color:var(--sky-600)}
+.ra-pillar:nth-child(2) .ra-pillar__num{color:var(--navy)}
+.ra-pillar__ico{flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:var(--sky-50);color:var(--sky-600)}
+.ra-pillar:nth-child(2) .ra-pillar__ico{background:#fff;color:var(--rose-text)}
 .ra-pillar__ico svg{width:28px;height:28px}
-.ra-pillar h3{font-size:18px}
+.ra-pillar h3{font-size:22px;max-width:360px}
 
 /* ---------- SERVICIOS ---------- */
 .ra-services{background:var(--sky-50)}
@@ -500,7 +518,14 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   .ra-mam .ra-hero__title{font-size:34px}
   .ra-hero__text{max-width:520px}
   .ra-hero__text{padding:36px 34px 38px}
-  .ra-why__grid,.ra-results__grid{gap:44px}
+  .ra-results__grid{gap:44px}
+  .ra-why__head{grid-template-columns:1fr;gap:18px;margin-bottom:44px}
+  .ra-why__head p{font-size:20px}
+  .ra-why__grid{gap:20px}
+  .ra-mam .ra-why__team{flex-wrap:wrap;gap:12px 14px}
+  .ra-why__team-txt{order:3;flex-basis:100%}
+  .ra-pillar{padding:24px}
+  .ra-pillar h3{font-size:20px}
   .ra-stats__grid{grid-template-columns:repeat(2,1fr)}
   .ra-team__grid{grid-template-columns:repeat(2,1fr)}
   .ra-biopsy{grid-template-columns:1fr}
@@ -529,8 +554,20 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
   .ra-mam .ra-btn{width:100%}
   .ra-tabs{margin:0 -16px;padding:2px 16px 6px}
   .ra-why__grid,.ra-results__grid,.ra-contact__grid{grid-template-columns:1fr;gap:36px}
-  .ra-why__text p{font-size:16px}
-  .ra-pillar:nth-child(2){margin-left:0}
+  .ra-why__head{margin-bottom:32px}
+  .ra-why__head p{font-size:18px}
+  .ra-why__grid{gap:16px}
+  .ra-why__media{min-height:0;aspect-ratio:4/4.6}
+  .ra-mam .ra-why__team{left:14px;right:14px;bottom:14px;flex-wrap:nowrap;gap:12px;padding:12px 12px 12px 14px}
+  .ra-why__team-txt{order:0;flex-basis:auto}
+  .ra-why__avatars img{width:38px;height:38px}
+  .ra-why__avatars img + img{margin-left:-12px}
+  .ra-why__team-txt strong{font-size:15px}
+  .ra-why__team-txt span{font-size:13px}
+  .ra-why__team-go{width:36px;height:36px}
+  .ra-pillars{grid-template-rows:none;gap:16px}
+  .ra-pillar{gap:18px;padding:20px 22px}
+  .ra-pillar h3{font-size:18px}
   .ra-cards,.ra-mini{grid-template-columns:1fr}
   .ra-card{padding:32px 26px}
   .ra-biopsy__body{padding:34px 24px}
@@ -576,25 +613,42 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 
   <!-- ===================== POR QUÉ ELEGIRNOS ===================== -->
   <section class="ra-section ra-why" id="por-que-elegirnos" aria-labelledby="ra-why-title">
-    <div class="ra-wrap ra-why__grid">
-      <div class="ra-why__text ra-reveal">
+    <div class="ra-wrap">
+      <header class="ra-why__head ra-reveal">
         <h2 class="ra-h2" id="ra-why-title">Por qué elegirnos</h2>
         <p>En nuestra Unidad de Imágenes Mamarias, sabemos que <strong>la prevención y el diagnóstico a tiempo salvan vidas.</strong> Te ofrecemos un entorno seguro, cómodo y con la tecnología diagnóstica de mayor precisión para que te sientas tranquila en cada paso de tu estudio.</p>
-      </div>
+      </header>
+      <div class="ra-why__grid">
+      <figure class="ra-why__media ra-reveal">
+        <img src="assets/por-que-elegirnos.jpg" width="2000" height="1288" alt="Paciente sonriente con el lazo rosa junto al mamógrafo" loading="lazy">
+        <a class="ra-why__team" href="#especialistas">
+          <span class="ra-why__avatars" aria-hidden="true">
+            <img src="assets/equipo-dra-indira-carrillo.jpg" width="900" height="968" alt="" loading="lazy">
+            <img src="assets/equipo-dra-dora-barrios.jpg" width="900" height="968" alt="" loading="lazy">
+            <img src="assets/equipo-dra-yenis-mercado.jpg" width="900" height="968" alt="" loading="lazy">
+          </span>
+          <span class="ra-why__team-txt"><strong>Especialistas en salud mamaria</strong><span>Conoce al equipo</span></span>
+          <span class="ra-why__team-go" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </a>
+      </figure>
       <ul class="ra-pillars ra-reveal" aria-label="Lo que te ofrecemos">
         <li class="ra-pillar">
+          <span class="ra-pillar__num" aria-hidden="true">01</span>
           <span class="ra-pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
-          <h3>Un entorno seguro</h3>
+          <h3>Entorno seguro</h3>
         </li>
         <li class="ra-pillar">
+          <span class="ra-pillar__num" aria-hidden="true">02</span>
           <span class="ra-pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 5.6a5.5 5.5 0 0 0-7.8 0L12 6.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-6.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
-          <h3>Un entorno cómodo</h3>
+          <h3>Entorno cómodo</h3>
         </li>
         <li class="ra-pillar">
+          <span class="ra-pillar__num" aria-hidden="true">03</span>
           <span class="ra-pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></svg></span>
           <h3>Tecnología diagnóstica de mayor precisión</h3>
         </li>
       </ul>
+      </div>
     </div>
   </section>
 
@@ -794,7 +848,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
             <h3>Preparación y estudios</h3>
             <details class="ra-qa" open><summary>¿Cómo debo prepararme para una mamografía?</summary><div class="ra-qa__a">El día del estudio no apliques desodorante, talco, perfume ni crema en las mamas ni en las axilas, ya que estos productos pueden aparecer como manchas o artificios en las imágenes. Te recomendamos asistir con ropa de dos piezas (blusa y pantalón/falda) para mayor comodidad.</div></details>
             <details class="ra-qa"><summary>¿A qué edad debo comenzar a hacerme la mamografía?</summary><div class="ra-qa__a">De forma general, se recomienda realizar una mamografía anual a partir de los 40 años. Si tienes antecedentes familiares de cáncer de mama, consulta con tu médico para iniciar la evaluación antes.</div></details>
-            <details class="ra-qa"><summary>¿En qué momento del mes es mejor programar mi cita?</summary><div class="ra-qa__a">Si bien el periodo menstrual no afecta los hallazgos de imágenes, se recomienda programar el estudio la semana posterior a tu menstruación. Durante este período, las mamas están menos sensibles y la compresión será mucho más tolerable.</div></details>
+            <details class="ra-qa"><summary>¿En qué momento del mes es mejor programar mi cita de mamografía?</summary><div class="ra-qa__a">Si bien el periodo menstrual no afecta los hallazgos de imágenes, se recomienda programar el estudio la semana posterior a tu menstruación. Durante este período, las mamas están menos sensibles y la compresión será mucho más tolerable.</div></details>
             <details class="ra-qa"><summary>¿Qué documentos debo llevar el día de mi estudio?</summary><div class="ra-qa__a">Es indispensable traer tu orden médica vigente, documento de identidad, y algo muy importante, tus estudios mamarios anteriores (placas o CD e informes) para poder realizar una comparación.</div></details>
           </div>
 
